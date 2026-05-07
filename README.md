@@ -1,5 +1,4 @@
 # LeetCode Python Solutions
-
 This repository contains my LeetCode problem solutions implemented in Python.
 
 ## 📌 Problems Solved

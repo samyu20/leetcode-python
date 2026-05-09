@@ -1,7 +1,20 @@
-#You are given an array prices where prices[i] is the price of a given stock on the ith day.
-# You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
-# Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0
-#Input: prices = [7,1,5,3,6,4] , Output: 5
+"""Problem: #121. Best Time to Buy and Sell Stock
+Given an array `prices` where prices[i] is the price of a stock on the i-th day,
+maximize profit by choosing ONE day to buy and a LATER day to sell.
+
+Return the maximum profit achievable.
+If no profit is possible, return 0.
+
+Example:
+Input : prices = [7, 1, 5, 3, 6, 4], Output: 5"""
+
+# Algorithm:
+# Store the first price as buy_price
+# Traverse through remaining prices
+# Update buy_price if smaller value found
+# Calculate profit using current_price - buy_price
+# Store maximum profit
+# Return profit
 
 def buy_and_sell(prices):                     #must buy before sell
     buy_price = prices[0]                     #b_p =7,1,1,1,1,1
@@ -16,3 +29,6 @@ def buy_and_sell(prices):                     #must buy before sell
 
 prices = [7, 1, 5, 3, 6, 4]
 print(buy_and_sell(prices))
+
+# Time Complexity  : O(n) — single pass through the array
+# Space Complexity : O(1) — only two variables maintained
